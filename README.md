@@ -1,10 +1,12 @@
-快速开始:
+
+
+__快速开始:__
     char expr=malloc(sizeof(char)*100);//需要保证expr的内存能被Cacukit.c文件访问,char expr[100]有时不能访问。    
-    double real,imag;//虚数可以用double _complex result,但感觉不稳定，后面会有详细介绍。【】    
+    double real,imag;//虚数可以用double _complex result,但感觉不稳定，后面会有详细介绍。    
     scanf("%s",expr);//输入表达式,比如1+1=,式子必须以'='结尾。    
     LoadExpr(expr);    
     int error=Caculate(&real,&imag);    
-    if (error!=NO_ERROR){   //检查错误，返回值是错误类型，详见头文件宏定义或者【】，
+    if (error!=NO_ERROR){   //检查错误，返回值是错误类型，详见头文件宏定义或者看后面详细介绍，
         sprintf("error");
         exit(1);
     }
